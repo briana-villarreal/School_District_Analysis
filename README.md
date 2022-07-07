@@ -104,3 +104,6 @@ I then assembled my calculations in a new DataFrame, named "type_summary_df" usi
 For the script written after signs of academic dishonesty were noted, I utilized the same code structure as the original script to determine the average scores and passing percentages based on school type. The results are as follows.
 ![image](https://user-images.githubusercontent.com/106560739/177861570-ecb6d3c1-2192-4e36-8d35-ca09f610816b.png)
 NOTE CHANGES HERE!!
+## Summary
+### Changes Observed
+Summarize 4 changes in the school district analysis after reading and math scores for the ninth grade at Thomas High School have been replaced with NaNs!!
