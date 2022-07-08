@@ -57,27 +57,25 @@ For the script written after signs of academic dishonesty were noted, I utilized
 ![image](https://user-images.githubusercontent.com/106560739/177857509-64a08f26-0bbd-4bcf-871e-e25356bdfbd4.png)
 Replacing the ninth graders’ math and reading scores did not affect Thomas High School’s performance relative to the other schools. Schools were ranked based on their average math scores, reading scores, percentage of students passing math, percentage of students passing reading, and the overall passing percentage. In both the original and updated script, Thomas High School ranked second in the district. The top ranking school was Cabrera High School and the bottom ranking school was Rodriguez High School.
 * _How does replacing the ninth-grade scores affect the following:_
-  * _Math and reading scores by grade:_ Prior to the analysis of math and reading scores by grade, I needed to create a grade-level DataFrame that was grouped by the name of the school. To get each grade as a series, I filtered "school_data_complete_df". I initialized a variable, “ninth_graders”, and set it equal to “school_data_complete_df["grade"] == "9th"”. I then repurposed this code by replacing “9th” with each grade. I made sure to assign a grade-level variable to each grade-level series. To get the average math scores for each grade level, I used the groupby() function on the “school_name” column and applied the mean() on the “math_score” column. For this code, the index was the “school_name”. I repurposed this code to find the average reading scores for each grade level by replacing “math_score” with “reading_score”. Once I performed these calculations, I then combined each grade level series for average math scores by school into a single DataFrame, which I named "math_scores_by_grade", using the pd.DataFrame() operator. I repurposed this same code to add the reading scores for each grade level to a new DataFrame, which I named "reading_scores_by_grade". 
-
-![image](https://user-images.githubusercontent.com/106560739/177858297-c7465911-d39b-4ea0-b4a1-39f04941e4fb.png)
-![image](https://user-images.githubusercontent.com/106560739/177858328-c74a9b50-1fa9-4143-b9d5-b354841b0624.png)
-
-For reporting purposes, I formatted the grade-level averages for both math and reading to one decimal place and removed the name of the index column, “school_name” using the map() function.
-
-![image](https://user-images.githubusercontent.com/106560739/177858423-6c206e99-cf10-4bee-9a16-5d891848fc92.png)
-![image](https://user-images.githubusercontent.com/106560739/177858450-d18a4b1b-2b35-47c8-b946-c7f3e5ac7bee.png)
-![image](https://user-images.githubusercontent.com/106560739/177858488-f2f14ec0-6911-4b3b-b24e-88f46c15a5cd.png)
-![image](https://user-images.githubusercontent.com/106560739/177858529-6e95059d-db88-4167-9e84-81251ffc0c59.png)
-
-For the script written after signs of academic dishonesty were noted, I utilized the same code structure as the original script to determine the average math and reading score for all grade levels from each school. The average math scores for all grade levels from each school are as follows. 
-
-![image](https://user-images.githubusercontent.com/106560739/177858760-4ec90045-9442-4e4d-8bf2-226fbe5a4e05.png)
-
-The average reading scores for all grade levels from each school are as follows.
-
-![image](https://user-images.githubusercontent.com/106560739/177858832-7a50a1b1-6e43-451c-abdc-155267cc2314.png)
-
-The math and reading scores by grade were greatly affected when the ninth grade scores for Thomas High School were replaced with NaN's. In the original script, Thomas High School had math score values for all grade levels. However, when the script was updated, Thomas High School no longer had math score values for 9th graders but instead had a NaN. The same trend was observed in Thomas High School reading score values. In the original script, Thomas High School had reading score values for all grade levels. However, when the script was updated, Thomas High School no longer had reading score values for 9th graders but instead had a NaN. All other schools were not affected by updating the code. 
+  * _Math and reading scores by grade:_ Prior to the analysis of math and reading scores by grade, I needed to create a grade-level DataFrame that was grouped by the name of the school. To get each grade as a series, I filtered "school_data_complete_df". I initialized a variable, “ninth_graders”, and set it equal to “school_data_complete_df["grade"] == "9th"”. I then repurposed this code by replacing “9th” with each grade. I made sure to assign a grade-level variable to each grade-level series. To get the average math scores for each grade level, I used the groupby() function on the “school_name” column and applied the mean() on the “math_score” column. For this code, the index was the “school_name”. I repurposed this code to find the average reading scores for each grade level by replacing “math_score” with “reading_score”. Once I performed these calculations, I then combined each grade level series for average math scores by school into a single DataFrame, which I named "math_scores_by_grade", using the pd.DataFrame() operator. I repurposed this same code to add the reading scores for each grade level to a new DataFrame, which I named "reading_scores_by_grade".
+  ![image](https://user-images.githubusercontent.com/106560739/177858297-c7465911-d39b-4ea0-b4a1-39f04941e4fb.png)
+  ![image](https://user-images.githubusercontent.com/106560739/177858328-c74a9b50-1fa9-4143-b9d5-b354841b0624.png)
+  For reporting purposes, I formatted the grade-level averages for both math and reading to one decimal place and removed the name of the index column,
+  “school_name” using the map() function. 
+  ![image](https://user-images.githubusercontent.com/106560739/177858423-6c206e99-cf10-4bee-9a16-5d891848fc92.png)
+  ![image](https://user-images.githubusercontent.com/106560739/177858450-d18a4b1b-2b35-47c8-b946-c7f3e5ac7bee.png)
+  ![image](https://user-images.githubusercontent.com/106560739/177858488-f2f14ec0-6911-4b3b-b24e-88f46c15a5cd.png)
+  ![image](https://user-images.githubusercontent.com/106560739/177858529-6e95059d-db88-4167-9e84-81251ffc0c59.png)
+  For the script written after signs of academic dishonesty were noted, I utilized the same code structure as the original script to determine the average math and
+  reading score for all grade levels from each school. The average math scores for all grade levels from each school are as follows.  
+  ![image](https://user-images.githubusercontent.com/106560739/177858760-4ec90045-9442-4e4d-8bf2-226fbe5a4e05.png)
+  The average reading scores for all grade levels from each school are as follows.
+  ![image](https://user-images.githubusercontent.com/106560739/177858832-7a50a1b1-6e43-451c-abdc-155267cc2314.png)
+  The math and reading scores by grade were greatly affected when the ninth grade scores for Thomas High School were replaced with NaN's. In the original script,
+  Thomas High School had math score values for all grade levels. However, when the script was updated, Thomas High School no longer had math score values for 9th
+  graders but instead had a NaN. The same trend was observed in Thomas High School reading score values. In the original script, Thomas High School had reading
+  score values for all grade levels. However, when the script was updated, Thomas High School no longer had reading score values for 9th graders but instead had a
+  NaN. All other schools were not affected by updating the code. 
   * _Scores by school spending:_ 
 Prior to the analysis of scores by school spending, I needed to sort the school spending per student into four spending bins, or ranges. To determine the bins to use, I used the describe() method on "per_school_capita". I found that the four bins were dollar amounts that ranged from the lowest amount ($578) to the highest amount ($655) a school spends on a student. Since the standard deviation was approximately 30, I increased the bins by $30 dollars. Therefore, the four bins were: $585, $630, $645, and $675. In Pandas, I wrote the ranges for the bins and grouped the spending ranges using the cut() function on the "per_school_capita". To determine how many schools were in each range, I used the count() method on the groupby() operator in relation to the "per_school_capita" series. I then named each range using a list of string values. After establishing the bin ranges, I created a new column in the "per_school_summary_df" and assigned the spending bins from the "per_school_capita" series. To do this I used the cut() function on the "per_school_capita" series and added the "spending_bins" and labels for the bins using “labels=group_names”. To see how school spending affected score averages and passing rates, I used the groupby() function on the "Spending Ranges (Per Student)" column. For each series, I used the mean() method to get the averages of the “Average Math Score” column, “Average Reading Score” column, “% Passing Math” column, and the  “% Passing Reading” column. For the average "% Overall Passing," I added the "% Passing Math" and "% Passing Reading" columns and then divided by 2. 
 ![image](https://user-images.githubusercontent.com/106560739/177859568-b04e3012-f9b6-4b3f-8344-66b9db53df05.png)
